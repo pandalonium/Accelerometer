@@ -4,7 +4,7 @@ var velx = 0;
 var rotation = 0;
 var angularvel = 0;
 
-window.onload = () => {
+function init() {
     DeviceMotionEvent.requestPermission().then(() => {
         window.addEventListener("devicemotion", (e) => {
             let dt = e.interval / 1000;
@@ -21,5 +21,10 @@ window.onload = () => {
     
         })
     })
+}
+
+window.onload = () => {
+
+    
     
 }
